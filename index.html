@@ -4,6 +4,7 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
+
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
@@ -12,20 +13,20 @@
                 let correct = document.querySelector('.correct');
                 correct.addEventListener('click', function() {
                     correct.style.backgroundColor = 'green';
-                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                    document.querySelector('#feedback1').innerHTML = 'CORRECT!';
                 });
 
                 let incorrect = document.querySelectorAll('.incorrect');
                 for (let i = 0; i < incorrect.length; i++){
                     incorrect[i].addEventListener('click', function() {
                         incorrect[i].style.backgroundColor = 'red';
-                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                        document.querySelector('#feedback1').innerHTML = 'INCORRECT';
                     });
                 }
 
                 document.querySelector('#check').addEventListener('click', function() {
                     let input = document.querySelector('input');
-                    if (input.value === 'Ukraine'){
+                    if (input.value === 'Харків'){
                         input.style.backgroundColor = 'green';
                         document.querySelector('#feedback2').innerHTML = 'Correct';
                     }else {
@@ -52,7 +53,7 @@
                 <button class="incorrect"> 25 million</button>
                 <button class="incorrect"> 50 million</button>
                 <button class="incorrect">15 million</button>
-                <button class="correct"> 40million</button>
+                <button class="correct"> 44million</button>
                 <p id="feedback1"></p>
 
             </div>
@@ -61,7 +62,7 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
-                <h3>В якому місті ти народилася?</h3>
+                <h3>Перша столиця України?</h3>
                 <input type = "text"></input>
                 <button id="check">Перевірити відповідь</button>
                 <p id = "feedback2"></p>
